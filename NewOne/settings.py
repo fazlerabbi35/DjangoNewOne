@@ -41,8 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #cloudinary
+    'cloudinary_storage',
+    'cloudinary',
+
     # Created Apps
-    'boost'
+    'boost',
+    'blog'
 ]
 
 MIDDLEWARE = [
@@ -130,6 +135,17 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'doaioj2cf',
+    'API_KEY': '196925795495435',
+    'API_SECRET': 'VfzYjlYlG_Uu-d8DoFd3LvrfIZw'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

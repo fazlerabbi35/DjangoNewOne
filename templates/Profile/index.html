@@ -5,14 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewOne project profile</title>
+
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <h1 style="align-items: center;">Hello Everynoe</h1>
+    <div class="container">
     {% for profile in profiles %}
-    <img src="{{ profile.picture.url }}" alt="My Image">
-    <h1>{{ profile.name }}</h1>
-    <h3>{{ profile.age }}</h3>
-    <h5>{{ profile.address }}</h5>
+    <img class="image" src="{{ profile.picture.url }}" alt="My Image">
+    <h1 class="name">{{ profile.name }}</h1>
+
+    <p class="text">Hello! My name is {{ profile.name }}. I am {{ profile.age }} years old and I am from {{ profile.address }}</p>
+    <p class="text">I am a software developer. My Experiences are HTML, CSS, Bootstrap, JavaScript, React, Python, Django, Heroku, cloudinary also.</p>
+
+
     {% endfor %}
+
+    </div>
 </body>
 </html>

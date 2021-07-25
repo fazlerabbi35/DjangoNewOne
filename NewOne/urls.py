@@ -23,7 +23,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls', namespace='blog')),
-    path('boost/', include('boost.urls', namespace='boost'))
+    path('profile/', include('boost.urls', namespace='boost')),
+    path('carousel/', include('carousel.urls', namespace='carousel'))
 ]
 
 # if settings.DEBUG:

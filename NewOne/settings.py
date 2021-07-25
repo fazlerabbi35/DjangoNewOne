@@ -47,7 +47,8 @@ INSTALLED_APPS = [
 
     # Created Apps
     'boost',
-    'blog'
+    'blog',
+    'carousel'
 ]
 
 MIDDLEWARE = [
